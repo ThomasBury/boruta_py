@@ -160,6 +160,10 @@ class BorutaPy(BaseEstimator, TransformerMixin):
         the df with the details (accepted or rejected) of the feature selection
 
 
+    importance_history_ : array-like, shape [n_features, n_iters]
+
+        The calculated importance values for each feature across all iterations.  
+
     Examples
     --------
 
@@ -570,6 +574,8 @@ class BorutaPy(BaseEstimator, TransformerMixin):
         else:
             # all are selected, thus we set feature supports to True
             self.support_ = np.ones(n_feat, dtype=np.bool)
+
+        self.importance_history_ = imp_history
 
         # notify user
         if self.verbose > 0:

@@ -6,7 +6,8 @@
 
 This project hosts Python implementations of the [Boruta all-relevant feature selection method](https://www.jstatsoft.org/article/view/v036i11).
 
-[Related blog post](http://danielhomola.com/2015/05/08/borutapy-an-all-relevant-feature-selection-method/)
+[Related blog post](https://danielhomola.com/feature%20selection/phd/borutapy-an-all-relevant-feature-selection-method/)
+
 
 ## How to install ##
 
@@ -72,6 +73,8 @@ Some improvements include:
 * Automatic n_estimator selection
 
 * Ranking of features
+
+* Feature importances are derived from Gini impurity instead of RandomForest R package's MDA. 
 
 For more details, please check the top of the docstring.
 
